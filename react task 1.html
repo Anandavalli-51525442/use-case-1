@@ -1,0 +1,127 @@
+<html>
+<head>
+<style>
+#recTable td,th {
+  border: 1px solid black;
+}
+#recTable{
+border: 1px solid black;
+ border-collapse: collapse;
+}
+
+</style>
+
+<script type="text/javascript">
+    function registerVisible() {
+        document.getElementById("register").style.display="block";
+      
+     document.getElementById("records").style.display="none";
+    }
+function recordVisible() {
+        document.getElementById("register").style.display="none";
+document.getElementById("records").style.display="block";
+    }
+</script>
+</head>
+<body>
+
+<a href="#" onclick="registerVisible()">Register</a>  
+<a href="#" onclick="recordVisible()">Records</a>
+
+
+<div id="register" style="display:none">
+<form >
+<table>
+  <tr>
+    <td><label for="pic">Photo:</label></td>
+    <td><img id="pic" name="pic" src="sample.jpg" alt="sample image" width="100" height="100"></td>
+  </tr>
+  <tr>
+    <td><label for="fname">Name:</label></td>
+    <td><input type="text" id="fname" name="fname"></td>
+  </tr>
+  <tr>
+    <td><label for="dob">DOB:</label></td>
+    <td> <input type="date" id="dob" name="dob" ></td>
+  </tr>
+<tr>
+    <td>Gender: </td>
+    <td> <input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label><input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label></td>
+  </tr>
+<tr>
+    <td><label for="Address">Review of W3Schools:</label></td>
+    <td><textarea id="Address"  rows="4" cols="4" name="Address"></textarea></td>
+  </tr>
+<tr>
+    <td><label for="pwd">Password:</label></td>
+    <td><input type="password" id="pwd"  name="pwd" ></td>
+  </tr>
+<tr>
+    <td><label for="confPwd">Password:</label></td>
+    <td><input type="password" id="confPwd" name="confPwd"  ></td>
+  </tr>
+<tr>
+    <td>Tech stack interested in:</td>
+    <td><input type="checkbox" name="vehicle1" value="1">
+  <label for="vehicle1"> one</label>
+  <input type="checkbox" name="vehicle2" value="2">
+  <label for="vehicle2"> two</label>
+  <input type="checkbox" name="vehicle3" value="3" checked>
+  <label for="vehicle3"> Three</label>
+</td>
+</tr>
+
+<tr>
+    <td><label for="country">Country:</label></td>
+    <td>
+<select name="country" id="cars">
+  <option value="india">India</option>
+  <option value="usa">USA</option>
+  <option value="uk">UK</option>
+  <option value="france">France</option>
+</select>
+</td>
+</tr>
+
+<tr>
+ <br ><td> <input type="submit" value="Submit"></td>
+  </tr>
+
+</table>
+</form>
+</div>
+<div id="records" style="display:none">
+<table id="recTable">
+  <tr>
+    <th>S.No</th>
+    <th>Photo</th>
+  <th>Name</th>
+  <th>DOB</th>
+  <th>Gender</th>
+ <th>Address</th>
+ <th>Country</th>
+ <th>Interested Tech stack</th>
+  </tr>
+  <tr>
+<td>1</td>
+<td><img id="pic" name="pic" src="img_girl.jpg" alt="sample image" width="100" height="100"></td>
+<td>First Name</td>
+<td>mm/dd/yyy</td>
+<td>Female</td>
+<td>Some Address</td>
+<td>India</td>
+<td><ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+</ul> </td>
+
+</tr>
+  
+</table>
+
+</div>
+</body>
+</html>
